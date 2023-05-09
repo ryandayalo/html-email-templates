@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> <!-- utf-8 works for most cases -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- Use the latest (edge) version of IE rendering engine -->
+	<meta name="x-apple-disable-message-reformatting">  <!-- Disable auto-scale in iOS 10 Mail entirely -->
+	<link href="https://fonts.googleapis.com/css?family=Playfair+Display:900|Poppins:300,400,700&display=swap" rel="stylesheet">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<title>MuscleCare - All Natural Pain Relief</title> <!-- The title tag shows in email notifications, like Android 4.4. -->
+
+	<style>
+body{
+    max-width:600px;
+    background-color:#fff;
+    font-family:Poppins,sans-serif;
+    margin:0 auto;
+}
+.reasons ul{
+    list-style-type:none;
+    padding-left:0;
+}
+.reasons ul li{
+    font-size:14px;
+    font-weight:300;
+    margin-bottom:20px;
+    position:relative;
+    padding-left:30px;
+}
+.reasons ul li:before{
+    position:absolute;
+    content:'';
+    background:url(img/Icon-Checkmark.png) no-repeat;
+    width:19px;
+    height:14px;
+    top:2px;
+    left:0;
+}
+.email-container{
+    background-color:#fff;
+    margin:0 auto;
+    padding-bottom:0;
+}
+.header{
+    padding:20px 10px 10px;
+    text-align:center;
+}
+.hero{
+    background:url(img/banner1.jpg) center center no-repeat;
+    background-size:100%;
+    height:210px;
+}
+.text-center{
+    text-align:center!important;
+}
+.header-text{
+    width:60%;
+    text-align:left;
+}
+.header-text h1{
+    font-size:45px;
+    font-weight:900;
+    color:#000;
+    line-height:.9;
+    margin:0;
+}
+.header-text h2{
+    font-size:15px;
+    font-weight:400;
+    color:#fff;
+    margin:15px 0;
+    padding:10px;
+    background:#000;
+    text-transform:uppercase;
+}
+.header-text h3{
+    font-size:30px;
+    font-weight:900;
+    color:#000;
+    line-height:.9;
+    margin:0;
+}
+.banner-image{
+    position:absolute;
+    right:20px;
+    bottom:0
+}
+.buy-button{
+    margin-top:20px;
+}
+.buy-button a{
+    font-family:'Playfair Display',serif;
+    color:#ffe4e0;
+    font-size:18px;
+    text-transform:capitalize;
+    background:#0e276b;
+    padding:20px 40px;
+    display:inline-block;
+    text-decoration:none;
+    letter-spacing:1px;
+}
+.buy-button a:hover{
+    color:#fff;
+    background:#03184f;
+    text-decoration:none;
+}
+.contact-wrap{
+    display:flex;
+    align-items:center;
+}
+.contact-name{
+    margin-left:20px;
+}
+.contact-name h3{
+    font-size:16px;
+    margin:0 0 10px;
+    line-height:1;
+}
+.contact-name p{
+    font-size:12px;
+    margin:0 0 10px;
+    line-height:1;
+}
+.contact-button a{
+    font-family:'Playfair Display',serif;
+    color:#ffe4e0;
+    font-size:10px;
+    background-color:#284ec2;
+    padding:10px;
+    border-radius:5px;
+    text-decoration:none;
+    display:inline-block;
+}
+.contact-button a:hover{
+    color:#fff;
+    background-color:#0e276b;
+}
+p{
+    color:#000;
+    margin-bottom:1.5em;
+}
+.section{
+    padding:30px 50px;
+    background-color:#ffe4e0;
+}
+.section h1{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    font-size:30px;
+    color:#0e276b;
+    text-align:center;
+    margin-top:0;
+}
+.section h2{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    font-size:24px;
+    text-align:center;
+}
+.elevate{
+    padding:30px 50px;
+}
+.elevate h2{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    font-size:40px;
+    color:#ffe4e0;
+    text-align:left;
+}
+.elevate p{
+    color:#fff;
+    font-weight:300;
+    font-size:14px;
+}
+.elevate ul{
+    list-style-type:none;
+    text-align:center;
+    padding:0;
+}
+.elevate ul li{
+    margin-bottom:20px;
+}
+.elevate ul li img:hover{
+    opacity:.7;
+}
+.similar-campaign{
+    padding-bottom:40px;
+}
+.similar-campaign h2{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    color:#0e276b;
+    margin-top:0;
+    font-size:30px;
+    text-align:center;
+}
+.contact-team{
+    margin-top:20px;
+}
+.contact-team h2{
+    font-family:'Playfair Display',serif;
+    font-weight:900;
+    color:#0e276b;
+    text-align:center;
+    font-size:30px;
+    text-align:center;
+}
+.contact-team ul{
+    list-style-type:none;
+    padding-left:0;
+}
+.contact-team ul li{
+    font-size:14px;
+    font-weight:400;
+    margin-bottom:10px;
+    position:relative;
+    padding-left:30px;
+    text-align: left;
+}
+.contact-team ul .li-email:before{
+    position:absolute;
+    content:'';
+    background:url(img/Icon-Email.png) no-repeat;
+    width:19px;
+    height:19px;
+    top:0;
+    left:0;
+}
+.contact-team ul .li-skype:before{
+    position:absolute;
+    content:'';
+    background:url(img/Icon-Skype.png) no-repeat;
+    width:19px;
+    height:19px;
+    top:0;
+    left:0;
+}
+.contact-team ul .li-phone:before{
+    position:absolute;
+    content:'';
+    background:url(img/Icon-Phone.png) no-repeat;
+    width:19px;
+    height:19px;
+    top:0;
+    left:0;
+}
+
+._text{
+    position:absolute;
+    left:0;
+    bottom:0;
+    width:100%;
+}
+._text h2{
+    color:#fff;
+    font-size:24px;
+}
+.no-pad{
+    padding:0;
+}
+.section2{
+    padding:30px 0;
+}
+.footer{
+    padding:30px;
+    text-align:center;
+    background-color:#fff;
+}
+.footer ul{
+    list-style-type:none;
+    padding:0;
+}
+.footer li{
+    display:inline-block;
+    padding:0 10px;
+    font-size:14px;
+}
+.footer li a{
+    font-weight:400;
+}
+.footer p{
+    font-size:14px;
+    font-weight:300;
+    text-align:center;
+}
+a{
+    color:#0e276b;
+    text-decoration:underline;
+    font-weight:700;
+}
+.banner2{
+    background:url(img/banner2.jpg) center center no-repeat;
+    background-size:100%;
+    height:180px;
+}
+.banner3{
+    background:url(img/banner3.jpg) center center no-repeat;
+    background-size:100%;
+    width:300px;
+    height:470px;
+}
+.section3{
+    text-align:center;
+    padding:50px;
+}
+.section3 .buy-button{
+    margin-top:0;
+}
+.points{
+    text-align:center;
+}
+.points h3{
+    font-size:22px;
+    margin:0;
+    color:#0e276b;
+}
+.points p{
+    font-size:18px;
+    margin:0;
+    color:#0e276b;
+}
+.points ul{
+    list-style-type:none;
+    padding:0;
+    margin:0;
+}
+.points ul li{
+    display:inline-block;
+    text-align:center;
+    padding:0 20px;
+}
+.campaign ul {
+    list-style-type: none;
+    padding-left: 0;
+    text-align: center;
+}
+.campaign ul li {
+    display: inline-block;
+}
+
+.campaign ul li a img {
+    width: 200px;
+}
+@media only screen and (max-width:767px){
+
+    .campaign ul li {
+        width: 30%;
+    }
+    img{
+        width:100%!important;
+    }
+    body{
+        width:unset;
+        max-width:unset;
+        background:#fff;
+    }
+    .header-wrap img{
+        height:50px;
+        width:unset!important;
+    }
+    .no-pad{
+        padding:10px!important;
+    }
+    .container{
+        padding:0!important;
+    }
+    .elevate h2{
+        text-align:center;
+    }
+    .header-wrap{
+        display:block;
+        text-align:center;
+        padding:0 50px;
+    }
+    .contact-team,.elevate,.section,.section3{
+        padding:30px 10px;
+    }
+    .section3 h2{
+        font-size:20px;
+        line-height:1.2;
+    }
+    .section img{
+        width:100%;
+    }
+    .header-text,.section tr td{
+        width:100%!important;
+        text-align:center;
+    }
+    .banner-image{
+        position:relative;
+        right:0;
+    }
+    .header-text{
+        padding:0 15px;
+    }
+    .header-text h1{
+        font-size:30px;
+    }
+    .header-text h2{
+        font-size:12px;
+    }
+    .header-text h3{
+        font-size:18px;
+    }
+    .section h2{
+        font-size:24px;
+    }
+    ._text h2{
+        font-size:18px;
+        margin:5px 0;
+    }
+    .desktop{
+        display:none;
+    }
+    .buy-button a{
+        font-size:14px;
+        padding:15px 20px;
+    }
+    .section1{
+        text-align:left!important;
+    }
+    .elevate ul li{
+        display:inline-block;
+    }
+    .contact-team tr td,.elevate tr td{
+        padding:0!important;
+    }
+    .reasons ul li{
+        text-align:left;
+    }
+    .section p{
+        text-align:left;
+    }
+    .points ul p{
+        text-align:center;
+    }
+    .point-section tr td {
+        padding: 0 !important;
+    }
+    .banner3{
+        width: 100%;
+        height:220px;
+        margin:auto;
+    }
+    .hero{
+        background:url(img/banner1.jpg) center center no-repeat;
+        background-size:100%;
+        height:130px;
+    }
+    .banner2 {
+        background-size: unset;
+    }
+    .footer p{
+        text-align:center;
+    }
+    .similar-campaign .no-pad{
+        padding:0!important;
+    }
+    .points h3 {
+        font-size: 22px;
+    }
+    .points p {
+        font-size: 18px;
+    }
+}
+
+	</style>
+</head>
+
+<body>
+<div class="container">
+	<div class="email-container">
+		<div class="header">
+			<div class="header-wrap">
+				<img src="img/Logo-Carousel-Full-Navy.png" alt="...">
+			</div>
+		</div>
+		<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+			<tbody>
+				<tr>
+					<td style="vertical-align: middle;">
+						<div class="hero"></div>
+					</td>
+				</tr>
+				<tr class="section1">
+					<td class="section">
+						<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+							<tbody>
+								<tr>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle" style="width: 47.5%;">
+														<h1>MuscleCare - All Natural Pain Relief</h1>
+														<p>Hi All,</p>
+														<p><b>Introducing MuscleCare – our newest health brand!</b></p>
+														<p>The very first all-natural pain relief cream on the market. Results showed MuscleCare performed better in pain reduction compared to all national brands tested by as much as 1700%, making MuscleCare the most effective pain relief today. MuscleCare also comes in an easy to use roll on method so is great for the older demographic. Backed by Dr. Chris Oswald, a world-renowned pain doctor, aka Dr. Pain, who came up with this proprietary formula backed by 20,000 patients and over 1 million units sold over the past decade.</p>
+														<p>Checkout our list of the <a href="#">top 5 reasons</a> why you should drop everything and start testing today! Get in contact with me to get your <a href="#">redirectless links</a> for this offer.</p>
+														<p>Cheers,<br>Arjun</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+							<tbody>
+								<tr>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle">
+														<a href="#">
+															<div class="banner2"></div>
+														</a>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="section no-pad point-section">
+						<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+							<tbody>
+								<tr>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle" style="padding: 30px;">
+														<div class="points">
+															<ul>
+																<li>
+																	<h3>CPA</h3>
+																	<p>$70 & $60</p>
+																</li>
+																<li>
+																	<h3>CTC</h3>
+																	<p>$70 & $60</p>
+																</li>
+																<li>
+																	<h3>CAC</h3>
+																	<p>$32 on FB</p>
+																</li>
+																<li>
+																	<h3>Avg. EPC</h3>
+																	<p>FB: $3.24</p>
+																</li>
+															</ul>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="section no-pad reasons" style="background-color: #444; color: #ffe4e0;">
+						<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+							<tbody>
+								<tr>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle">
+														<div class="banner3"></div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle" style="padding: 30px;">
+														<h2>Top 5 Reasons to apply to run this campaign</h2>
+														<ul>
+															<li>Hashed Email List available on request</li>
+															<li>1-year money back guarantee</li>
+															<li>Free shipping on all bundles</li>
+															<li>Users can pay in 4 installments via Sezzle</li>
+															<li>Doctor Endorsed/Backed by Clinical Studies – Dr. Chris Oswald aka Dr. Pain, inventor of MuscleCare</li>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="section3">
+						<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+							<tbody>
+								<tr>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle">
+														<div class="buy-button">
+															<a href="#">Apply To The Campaign</a>
+														</div>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="similar-campaign">
+						<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+							<h2>Similar Campaigns</h2>
+							<tbody>
+								<tr>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle" class="campaign">
+                                                        <ul>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="img/similar-campaign.jpg" alt="...">
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="img/similar-campaign.jpg" alt="...">
+                                                            </a>
+                                                        </li>
+                                                        <li>
+                                                            <a href="#">
+                                                                <img src="img/similar-campaign.jpg" alt="...">
+                                                            </a>
+                                                        </li>
+                                                        </ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr class="contact-team">
+					<td class="section no-pad">
+						<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+							<h2>Contact The Team</h2>
+							<tbody>
+								<tr>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle" style="padding: 30px;">
+														<div class="contact-wrap">
+															<div class="contact-img">
+																<img src="img/photo.jpg" alt="">
+															</div>
+															<div class="contact-name">
+																<h3>Arjun Sharma</h3>
+																<p>SENIOR AFFILIATE MANAGER</p>
+
+																<div class="contact-button">
+																	<a href="#">Schedule Appointment</a>
+																</div>
+															</div>
+														</div>
+														<ul>
+															<li class="li-email">arjun.sharma@jumbleberry.com</li>
+															<li class="li-skype">arjun.sharma@jbskype.com</li>
+															<li class="li-phone">647-895-8013</li>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle" style="padding: 30px;">
+														<div class="contact-wrap">
+															<div class="contact-img">
+																<img src="img/photo.jpg" alt="">
+															</div>
+															<div class="contact-name">
+																<h3>Arjun Sharma</h3>
+																<p>SENIOR AFFILIATE MANAGER</p>
+
+																<div class="contact-button">
+																	<a href="#">Schedule Appointment</a>
+																</div>
+															</div>
+														</div>
+														<ul>
+															<li class="li-email">arjun.sharma@jumbleberry.com</li>
+															<li class="li-skype">arjun.sharma@jbskype.com</li>
+															<li class="li-phone">647-895-8013</li>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+								<tr>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle" style="padding: 30px;">
+														<div class="contact-wrap">
+															<div class="contact-img">
+																<img src="img/photo.jpg" alt="">
+															</div>
+															<div class="contact-name">
+																<h3>Arjun Sharma</h3>
+																<p>SENIOR AFFILIATE MANAGER</p>
+
+																<div class="contact-button">
+																	<a href="#">Schedule Appointment</a>
+																</div>
+															</div>
+														</div>
+														<ul>
+															<li class="li-email">arjun.sharma@jumbleberry.com</li>
+															<li class="li-skype">arjun.sharma@jbskype.com</li>
+															<li class="li-phone">647-895-8013</li>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle" style="padding: 30px;">
+														<div class="contact-wrap">
+															<div class="contact-img">
+																<img src="img/photo.jpg" alt="">
+															</div>
+															<div class="contact-name">
+																<h3>Arjun Sharma</h3>
+																<p>SENIOR AFFILIATE MANAGER</p>
+
+																<div class="contact-button">
+																	<a href="#">Schedule Appointment</a>
+																</div>
+															</div>
+														</div>
+														<ul>
+															<li class="li-email">arjun.sharma@jumbleberry.com</li>
+															<li class="li-skype">arjun.sharma@jbskype.com</li>
+															<li class="li-phone">647-895-8013</li>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="section no-pad elevate" style="background-color: #0e276b; color: #fff;">
+						<table align="center" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+							<tbody>
+								<tr>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle" style="padding: 30px 50px;">
+														<h2>Elevate your brand to new heights.</h2>
+														<p>We are not an agency. We are a performance marketing company with access to thousand of media buyers. </p>
+														<p>What is the difference? The difference is our compensation is solely based on performance. Meaning you only pay a fixed, agreed-upon fee for every customer we help you acquire. Simple as that. </p>
+														<p>We only win when you win - if we don't deliver results, we don't get paid. We're that confident we can ensure your brand's success.</p>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+									<td class="no-pad">
+										<table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
+											<tbody>
+												<tr>
+													<td valign="middle" style="padding: 30px 50px; text-align: center;">
+														<img class ="desktop" src="img/Logo-Carousel-Mark-Peach.png" alt="..." srcset="img/Logo-Carousel-Mark-Peach.png 1x, img/Logo-Carousel-Mark-Peach@2x.png 2x">
+														<ul>
+															<li>
+																<a href="#">
+																	<img src="img/Icon-FB.png" alt="Facebook icon" srcset="img/Icon-FB.png 1x, img/Icon-FB@2x.png 2x">
+																</a>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="img/Icon-IG.png" alt="Instagram icon" srcset="img/Icon-IG.png 1x, img/Icon-IG@2x.png 2x">
+																</a>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="img/Icon-IN.png" alt="LinkedIn icon" srcset="img/Icon-IN.png 1x, img/Icon-IN@2x.png 2x">
+																</a>
+															</li>
+															<li>
+																<a href="#">
+																	<img src="img/Icon-Link.png" alt="Link icon" srcset="img/Icon-Link.png 1x, img/Icon-Link@2x.png 2x">
+																</a>
+															</li>
+														</ul>
+													</td>
+												</tr>
+											</tbody>
+										</table>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+				<tr>
+					<td class="section footer">
+						<table align="top" role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%" style="margin: auto;">
+							<tbody>
+								<tr>
+									<td class="no-pad">
+										<ul>
+											<li><a href="#">View Online</a></li>
+											<li><a href="#">Subscribe</a></li>
+											<li><a href="#">Forward</a></li>
+										</ul>
+										<p>Copyright &copy; Carousel - 2020 All Rights Reserved.</p>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</div>
+</body>
+</html>
